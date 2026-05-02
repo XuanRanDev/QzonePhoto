@@ -834,8 +834,8 @@ const addFileByPath = async (filePath) => {
     }
 
     // 检查文件大小（最大500MB）
-    if (fileInfo.fileSize > 500 * 1024 * 1024) {
-      ElMessage.error(`文件过大：${fileInfo.fileName}，最大支持500MB`)
+    if (fileInfo.fileSize > 500 * 1024 * 1024 * 3) {
+      ElMessage.error(`文件过大：${fileInfo.fileName}，最大支持1500MB`)
       return
     }
 
